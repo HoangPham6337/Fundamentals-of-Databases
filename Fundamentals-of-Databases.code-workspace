@@ -6,6 +6,7 @@
 	],
 	"settings": {
 		"files.autoSave": "onFocusChange",
-		"editor.fontFamily": "'Fira Code', 'monospace', monospace"
+		"editor.fontFamily": "'Fira Code', 'monospace', monospace",
+		"editor.fontSize": 16
 	}
 }

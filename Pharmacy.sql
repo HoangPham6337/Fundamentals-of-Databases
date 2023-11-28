@@ -6,7 +6,7 @@ USE Pharmacy;
 CREATE TABLE Drugs(
     DrugID VARCHAR(4) NOT NULL,
     DrugName VARCHAR(50) NOT NULL,
-    BatchNumber VARCHAR(20),
+    BatchNumber VARCHAR(20) NOT NULL,
     ExpiryDate DATE,
     StorageCondition VARCHAR(20),
     ArrivalDate DATE,
@@ -18,8 +18,8 @@ CREATE TABLE Drugs(
 
 -- Create the Manufacturer table
 CREATE TABLE Manufacturer (
-    ManufacturerID VARCHAR(4),
-    CompanyName VARCHAR(50),
+    ManufacturerID VARCHAR(4) NOT NULL,
+    CompanyName VARCHAR(50) NOT NULL,
     Address VARCHAR(100),
     PhoneNumber VARCHAR(15),
     Website VARCHAR(50)
@@ -27,8 +27,8 @@ CREATE TABLE Manufacturer (
 
 -- Create the BatchDetails table
 CREATE TABLE BatchDetails (
-    BatchNumber VARCHAR(20),
-    SupplierID VARCHAR(4),
+    BatchNumber VARCHAR(20) NOT NULL,
+    SupplierID VARCHAR(4) NOT NULL,
     ShippingDatetime DATE,
     DeparturePort VARCHAR(20),
     DestinationPort VARCHAR(20)
@@ -36,7 +36,7 @@ CREATE TABLE BatchDetails (
 
 -- Create the Customer table
 CREATE TABLE Customer (
-    CustomerID VARCHAR(4),
+    CustomerID VARCHAR(4) NOT NULL,
     FirstName VARCHAR(50),
     LastName VARCHAR(50),
     Phone VARCHAR(15),
@@ -46,7 +46,7 @@ CREATE TABLE Customer (
 
 -- Create the Staff table
 CREATE TABLE Staff (
-    StaffID VARCHAR(4),
+    StaffID VARCHAR(4) NOT NULL,
     FirstName VARCHAR(50),
     LastName VARCHAR(50),
     HireDate DATE,
@@ -57,7 +57,7 @@ CREATE TABLE Staff (
 
 -- Create the Supplier table
 CREATE TABLE Supplier (
-    SupplierID VARCHAR(4),
+    SupplierID VARCHAR(4) NOT NULL,
     CompanyName VARCHAR(50),
     HeadOffice VARCHAR(100),
     Website VARCHAR(50),
@@ -66,7 +66,7 @@ CREATE TABLE Supplier (
 
 -- Create the Shipper table
 CREATE TABLE Shipper (
-    ShipperID VARCHAR(4),
+    ShipperID VARCHAR(4) NOT NULL,
     FirstName VARCHAR(50),
     LastName VARCHAR(50),
     Phone VARCHAR(15),
