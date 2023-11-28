@@ -83,10 +83,10 @@ CREATE TABLE Orders (
     StaffID VARCHAR(4) NOT NULL,
     ShipperID VARCHAR(4) NOT NULL,
     Quantity INT DEFAULT 0,
-    OrderDate DATE DEFAULT CURRENT_DATE,
+    OrderDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     Status VARCHAR(20) DEFAULT 'Pending',
     Foreign Key (DrugID) REFERENCES Drugs(DrugID),
     Foreign Key (CustomerID) REFERENCES Customer(CustomerID),
     Foreign Key (StaffID) REFERENCES Staff(StaffID),
     Foreign Key (ShipperID) REFERENCES Shipper(ShipperID)
-)
+);
