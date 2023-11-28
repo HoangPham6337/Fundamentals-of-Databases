@@ -6,5 +6,3 @@ SELECT * FROM `Shipper`;
 SELECT * FROM `Staff`;
 SELECT * FROM `Supplier`;
 SELECT * FROM `Orders`;
-
-INSERT INTO Orders() VALUES()
