@@ -89,4 +89,4 @@ CREATE TABLE Orders (
     Foreign Key (CustomerID) REFERENCES Customer(CustomerID),
     Foreign Key (StaffID) REFERENCES Staff(StaffID),
     Foreign Key (ShipperID) REFERENCES Shipper(ShipperID)
-)
+);
