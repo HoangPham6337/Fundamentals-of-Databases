@@ -104,13 +104,13 @@ INSERT INTO Staff VALUES
 
 -- Insert data into the Shipper table
 INSERT INTO Shipper VALUES
-('S01', 'David', 'Harris', '555-123-4567', '123 Main Street, City A', 'david.harris@gmail.com'),
-('S02', 'Olivia', 'Wilson', '555-234-5678', '456 Oak Avenue, City B', 'olivia.wilson@gmail.com'),
-('S03', 'Ethan', 'Turner', '555-345-6789', '789 Elm Lane, City C', 'ethan.turner@gmail.com'),
-('S04', 'Emma', 'Parker', '555-456-7890', '321 Pine Road, City D', 'emma.parker@gmail.com'),
-('S05', 'Liam', 'Cooper', '555-567-8901', '567 Birch Drive, City E', 'liam.cooper@gmail.com'),
-('S06', 'Ava', 'Hayes', '555-678-9012', '890 Cedar Street, City F', 'ava.hayes@gmail.com'),
-('S07', 'Noah', 'Griffin', '555-789-0123', '234 Maple Avenue, City G', 'noah.griffin@gmail.com'),
-('S08', 'Sophia', 'Harrison', '555-890-1234', '567 Oak Lane, City H', 'sophia.harrison@gmail.com'),
-('S09', 'Mason', 'Porter', '555-901-2345', '901 Pine Drive, City I', 'mason.porter@gmail.com'),
-('S10', 'Mia', 'Bennett', '555-012-3456', '123 Elm Road, City J', 'mia.bennett@gmail.com');
+('SH01', 'David', 'Harris', '555-123-4567', '123 Main Street, City A', 'david.harris@gmail.com'),
+('SH02', 'Olivia', 'Wilson', '555-234-5678', '456 Oak Avenue, City B', 'olivia.wilson@gmail.com'),
+('SH03', 'Ethan', 'Turner', '555-345-6789', '789 Elm Lane, City C', 'ethan.turner@gmail.com'),
+('SH04', 'Emma', 'Parker', '555-456-7890', '321 Pine Road, City D', 'emma.parker@gmail.com'),
+('SH05', 'Liam', 'Cooper', '555-567-8901', '567 Birch Drive, City E', 'liam.cooper@gmail.com'),
+('SH06', 'Ava', 'Hayes', '555-678-9012', '890 Cedar Street, City F', 'ava.hayes@gmail.com'),
+('SH07', 'Noah', 'Griffin', '555-789-0123', '234 Maple Avenue, City G', 'noah.griffin@gmail.com'),
+('SH08', 'Sophia', 'Harrison', '555-890-1234', '567 Oak Lane, City H', 'sophia.harrison@gmail.com'),
+('SH09', 'Mason', 'Porter', '555-901-2345', '901 Pine Drive, City I', 'mason.porter@gmail.com'),
+('SH10', 'Mia', 'Bennett', '555-012-3456', '123 Elm Road, City J', 'mia.bennett@gmail.com');
