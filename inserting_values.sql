@@ -115,5 +115,25 @@ INSERT INTO Shipper VALUES
 ('SH09', 'Mason', 'Porter', '555-901-2345', '901 Pine Drive, City I', 'mason.porter@gmail.com'),
 ('SH10', 'Mia', 'Bennett', '555-012-3456', '123 Elm Road, City J', 'mia.bennett@gmail.com');
 
-INSERT INTO Orders (`DrugID`, `CustomerID`, `StaffID`, `ShipperID`, `Quantity`)
-VALUES ("D001", "C001", "PS01", "SH01", 50);
+-- Insert data into the Orders table
+INSERT INTO Orders (`DrugID`, `CustomerID`, `StaffID`, `ShipperID`, `Quantity`) VALUES
+('D001', 'C001', 'PS01', 'SH01', 50),
+('D002', 'C002', 'PS02', 'SH02', 75),
+('D003', 'C003', 'PS03', 'SH03', 30),
+('D004', 'C004', 'PS04', 'SH04', 100),
+('D005', 'C005', 'PS05', 'SH05', 60),
+('D006', 'C006', 'PS06', 'SH06', 90),
+('D007', 'C007', 'PS07', 'SH07', 45),
+('D008', 'C008', 'PS08', 'SH08', 110),
+('D009', 'C009', 'PS09', 'SH09', 60),
+('D010', 'C010', 'PS10', 'SH10', 80),
+('D011', 'C001', 'PS01', 'SH01', 70),
+('D012', 'C002', 'PS02', 'SH02', 140),
+('D013', 'C003', 'PS03', 'SH03', 75),
+('D014', 'C004', 'PS04', 'SH04', 70),
+('D015', 'C005', 'PS05', 'SH05', 90),
+('D016', 'C006', 'PS06', 'SH06', 110),
+('D017', 'C007', 'PS07', 'SH07', 85),
+('D018', 'C008', 'PS08', 'SH08', 100),
+('D019', 'C009', 'PS09', 'SH09', 120),
+('D020', 'C010', 'PS10', 'SH10', 130);

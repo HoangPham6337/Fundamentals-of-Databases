@@ -11,3 +11,4 @@ SELECT * FROM `Orders`;
 SELECT `DrugID`, `DrugName`, `Quantity`
 FROM drugs;
 SELECT * FROM orders;
+DELETE FROM orders;
