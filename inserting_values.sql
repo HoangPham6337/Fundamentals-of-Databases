@@ -81,17 +81,16 @@ INSERT INTO Customer VALUES
 
 -- Insert data into the Staff table
 INSERT INTO Staff VALUES
-('PS01', 'John', 'Smith', '2023-01-15', '555-123-4567', '123 Main Street, City A', 'john.smith@emailprovider.com'),
-('PS02', 'Emily', 'Johnson', '2023-02-28', '555-234-5678', '456 Oak Avenue, City B', 'emily.johnson@emailprovider.com'),
-('PS03', 'Michael', 'Davis', '2023-03-12', '555-345-6789', '789 Elm Lane, City C', 'michael.davis@emailprovider.com'),
-('PS04', 'Olivia', 'Taylor', '2023-04-05', '555-456-7890', '321 Pine Road, City D', 'olivia.taylor@emailprovider.com'),
-('PS05', 'Ethan', 'Miller', '2023-05-20', '555-567-8901', '567 Birch Drive, City E', 'ethan.miller@emailprovider.com'),
-('PS06', 'Emma', 'White', '2023-06-08', '555-678-9012', '890 Cedar Street, City F', 'emma.white@emailprovider.com'),
-('PS07', 'Liam', 'Anderson', '2023-07-03', '555-789-0123', '234 Maple Avenue, City G', 'liam.anderson@emailprovider.com'),
-('PS08', 'Ava', 'Garcia', '2023-08-17', '555-890-1234', '567 Oak Lane, City H', 'ava.garcia@emailprovider.com'),
-('PS09', 'Noah', 'Martin', '2023-09-22', '555-901-2345', '901 Pine Drive, City I', 'noah.martin@emailprovider.com'),
-('PS10', 'Sophia', 'Hall', '2023-10-10', '555-012-3456', '123 Elm Road, City J', 'sophia.hall@emailprovider.com');
-
+('PS01', 'John', 'Smith', '2023-01-15', '555-123-4567', '123 Main Street, City A', 'john.smith@emailprovider.com', 'Active', NULL),
+('PS02', 'Emily', 'Johnson', '2023-02-28', '555-234-5678', '456 Oak Avenue, City B', 'emily.johnson@emailprovider.com', 'Active', NULL),
+('PS03', 'Michael', 'Davis', '2023-03-12', '555-345-6789', '789 Elm Lane, City C', 'michael.davis@emailprovider.com', 'Inactive', "2023-06-13"),
+('PS04', 'Olivia', 'Taylor', '2023-04-05', '555-456-7890', '321 Pine Road, City D', 'olivia.taylor@emailprovider.com', 'Active', NULL),
+('PS05', 'Ethan', 'Miller', '2023-05-20', '555-567-8901', '567 Birch Drive, City E', 'ethan.miller@emailprovider.com', 'Active', NULL),
+('PS06', 'Emma', 'White', '2023-06-08', '555-678-9012', '890 Cedar Street, City F', 'emma.white@emailprovider.com', 'Inactive', "2023-08-28"),
+('PS07', 'Liam', 'Anderson', '2023-07-03', '555-789-0123', '234 Maple Avenue, City G', 'liam.anderson@emailprovider.com', 'Active', NULL),
+('PS08', 'Ava', 'Garcia', '2023-08-17', '555-890-1234', '567 Oak Lane, City H', 'ava.garcia@emailprovider.com', 'Active', NULL),
+('PS09', 'Noah', 'Martin', '2023-09-22', '555-901-2345', '901 Pine Drive, City I', 'noah.martin@emailprovider.com', 'Inactive', "2023-09-12"),
+('PS10', 'Sophia', 'Hall', '2023-10-10', '555-012-3456', '123 Elm Road, City J', 'sophia.hall@emailprovider.com', 'Active', NULL);
 
 -- Insert data into the Shipper table
 INSERT INTO Shipper VALUES
@@ -117,14 +116,14 @@ INSERT INTO Orders (`DrugID`, `CustomerID`, `StaffID`, `ShipperID`, `Quantity`, 
 ('D007', 'C007', 'PS07', 'SH07', 45, '2022-06-10'),
 ('D008', 'C008', 'PS08', 'SH08', 110, '2022-11-11'),
 ('D009', 'C009', 'PS09', 'SH09', 60, '2021-02-12'),
-('D010', 'C010', 'PS10', 'SH10', 80, '2022-04-13'),
-('D011', 'C001', 'PS01', 'SH01', 70, '2021-06-14'),
-('D012', 'C002', 'PS02', 'SH02', 140, '2022-11-15'),
-('D013', 'C003', 'PS03', 'SH03', 75, '2022-12-16'),
-('D014', 'C004', 'PS04', 'SH04', 70, '2021-12-17'),
-('D015', 'C005', 'PS05', 'SH05', 90, '2022-12-18'),
-('D016', 'C006', 'PS06', 'SH06', 110, '2021-12-19'),
-('D017', 'C007', 'PS07', 'SH07', 85, '2022-12-20'),
-('D018', 'C008', 'PS08', 'SH08', 100, '2022-12-21'),
-('D019', 'C009', 'PS09', 'SH09', 120, '2023-12-22'),
+('D007', 'C010', 'PS10', 'SH10', 80, '2022-04-13'),
+('D010', 'C001', 'PS01', 'SH01', 70, '2021-06-14'),
+('D002', 'C002', 'PS02', 'SH02', 140, '2022-11-15'),
+('D003', 'C003', 'PS03', 'SH03', 75, '2022-12-16'),
+('D005', 'C004', 'PS04', 'SH04', 70, '2021-12-17'),
+('D003', 'C005', 'PS05', 'SH05', 90, '2022-12-18'),
+('D004', 'C006', 'PS06', 'SH06', 110, '2021-12-19'),
+('D002', 'C007', 'PS07', 'SH07', 85, '2022-12-20'),
+('D001', 'C008', 'PS08', 'SH08', 100, '2022-12-21'),
+('D001', 'C009', 'PS09', 'SH09', 120, '2023-12-22'),
 ('D020', 'C010', 'PS10', 'SH10', 130, '2023-12-01');

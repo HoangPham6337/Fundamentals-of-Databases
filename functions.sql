@@ -20,6 +20,6 @@ BEGIN
 
     -- Update OrderDate and Status for the new row
     SET NEW.OrderDate = IFNULL(NEW.OrderDate, CURRENT_TIMESTAMP),
-        NEW.Status = IFNULL(NEW.Status, 'Pending');
+        NEW.Order_Status= IFNULL(NEW.Order_Status, 'Pending');
 END //
 DELIMITER ;

@@ -64,7 +64,9 @@ CREATE TABLE Staff (
     HireDate DATE DEFAULT NULL,
     Phone VARCHAR(15) DEFAULT NULL,
     Staff_Address VARCHAR(100) DEFAULT NULL,
-    Email VARCHAR(100) DEFAULT NULL
+    Email VARCHAR(100) DEFAULT NULL,
+    Staff_Status VARCHAR(20) DEFAULT 'Inactive',
+    EndDate DATE DEFAULT NULL
 );
 
 -- Create the Shipper table
