@@ -1,24 +1,24 @@
 -- Insert data into the Manufacturer table
 INSERT INTO Manufacturer VALUES
-('M001', 'Pfizer', '123 Main Street, City A', '555-123-4567', 'www.pfizer.com'),
-('M002', 'Johnson & Johnson', '456 Oak Avenue, City B', '555-234-5678', 'www.jnj.com'),
-('M003', 'Novartis', '789 Elm Lane, City C', '555-345-6789', 'www.novartis.com'),
-('M004', 'Roche', '321 Pine Road, City D', '555-456-7890', 'www.roche.com'),
-('M005', 'Merck', '567 Birch Drive, City E', '555-567-8901', 'www.merck.com'),
-('M006', 'GlaxoSmithKline', '890 Cedar Street, City F', '555-678-9012', 'www.gsk.com'),
-('M007', 'AstraZeneca', '234 Maple Avenue, City G', '555-789-0123', 'www.astrazeneca.com'),
-('M008', 'Sanofi', '567 Oak Lane, City H', '555-890-1234', 'www.sanofi.com'),
-('M009', 'Eli Lilly', '901 Pine Drive, City I', '555-901-2345', 'www.lilly.com'),
-('M010', 'AbbVie', '123 Elm Road, City J', '555-012-3456', 'www.abbvie.com');
+('M001', 'Pfizer', '456 Broadway, New York, NY', '555-123-4567', 'www.pfizer.com'),
+('M002', 'Johnson & Johnson', '789 Madison Avenue, New York, NY', '555-234-5678', 'www.jnj.com'),
+('M003', 'Novartis', '321 5th Avenue, New York, NY', '555-345-6789', 'www.novartis.com'),
+('M004', 'Roche', '567 Lexington Avenue, New York, NY', '555-456-7890', 'www.roche.com'),
+('M005', 'Merck', '890 Park Avenue, New York, NY', '555-567-8901', 'www.merck.com'),
+('M006', 'GlaxoSmithKline', '234 7th Avenue, New York, NY', '555-678-9012', 'www.gsk.com'),
+('M007', 'AstraZeneca', '567 Broadway, New York, NY', '555-789-0123', 'www.astrazeneca.com'),
+('M008', 'Sanofi', '901 Madison Avenue, New York, NY', '555-890-1234', 'www.sanofi.com'),
+('M009', 'Eli Lilly', '123 6th Avenue, New York, NY', '555-901-2345', 'www.lilly.com'),
+('M010', 'AbbVie', '456 Park Avenue South, New York, NY', '555-012-3456', 'www.abbvie.com');
 
 
 -- Insert data into the Supplier table
 INSERT INTO Supplier VALUES
-('S001', 'Pfizer', '123 Main Street, City A', 'www.pfizer-supplier.com', '555-123-4567'),
-('S002', 'Johnson & Johnson', '456 Oak Avenue, City B', 'www.jnj-supplier.com', '555-234-5678'),
-('S003', 'Novartis', '789 Elm Lane, City C', 'www.novartis-supplier.com', '555-345-6789'),
-('S004', 'Roche', '321 Pine Road, City D', 'www.roche-supplier.com', '555-456-7890'),
-('S005', 'Merck', '567 Birch Drive, City E', 'www.merck-supplier.com', '555-567-8901');
+('S001', 'Pfizer', '123 Queens Street, Queens, NY', 'www.pfizer-supplier.com', '555-123-4567'),
+('S002', 'Johnson & Johnson', '456 Queens Avenue, Queens, NY', 'www.jnj-supplier.com', '555-234-5678'),
+('S003', 'Novartis', '789 Queens Lane, Queens, NY', 'www.novartis-supplier.com', '555-345-6789'),
+('S004', 'Roche', '321 Queens Road, Queens, NY', 'www.roche-supplier.com', '555-456-7890'),
+('S005', 'Merck', '567 Queens Drive, Queens, NY', 'www.merck-supplier.com', '555-567-8901');
 
 -- Insert data into the BatchDetails table
 INSERT INTO BatchDetails VALUES
@@ -68,42 +68,42 @@ INSERT INTO Drugs VALUES
 
 -- Insert data into the Customer table
 INSERT INTO Customer VALUES
-('C001', 'James', 'Johnson', '555-123-4567', '123 Main Street, City A', 'james.johnson@gmail.com'),
-('C002', 'Olivia', 'Smith', '555-234-5678', '456 Oak Avenue, City B', 'olivia.smith@gmail.com'),
-('C003', 'Ethan', 'Davis', '555-345-6789', '789 Elm Lane, City C', 'ethan.davis@gmail.com'),
-('C004', 'Emma', 'Miller', '555-456-7890', '321 Pine Road, City D', 'emma.miller@gmail.com'),
-('C005', 'Liam', 'Taylor', '555-567-8901', '567 Birch Drive, City E', 'liam.taylor@gmail.com'),
-('C006', 'Ava', 'White', '555-678-9012', '890 Cedar Street, City F', 'ava.white@gmail.com'),
-('C007', 'Noah', 'Anderson', '555-789-0123', '234 Maple Avenue, City G', 'noah.anderson@gmail.com'),
-('C008', 'Sophia', 'Garcia', '555-890-1234', '567 Oak Lane, City H', 'sophia.garcia@gmail.com'),
-('C009', 'Mason', 'Martin', '555-901-2345', '901 Pine Drive, City I', 'mason.martin@gmail.com'),
-('C010', 'Mia', 'Hall', '555-012-3456', '123 Elm Road, City J', 'mia.hall@gmail.com');
+('C001', 'James', 'Johnson', '555-123-4567', '123 Brooklyn Street, Brooklyn, NY', 'james.johnson@gmail.com'),
+('C002', 'Olivia', 'Smith', '555-234-5678', '456 Oak Avenue, Brooklyn, NY', 'olivia.smith@gmail.com'),
+('C003', 'Ethan', 'Davis', '555-345-6789', '789 Elm Lane, Brooklyn, NY', 'ethan.davis@gmail.com'),
+('C004', 'Emma', 'Miller', '555-456-7890', '321 Pine Road, Brooklyn, NY', 'emma.miller@gmail.com'),
+('C005', 'Liam', 'Taylor', '555-567-8901', '567 Birch Drive, Brooklyn, NY', 'liam.taylor@gmail.com'),
+('C006', 'Ava', 'White', '555-678-9012', '890 Cedar Street, Brooklyn, NY', 'ava.white@gmail.com'),
+('C007', 'Noah', 'Anderson', '555-789-0123', '234 Maple Avenue, Brooklyn, NY', 'noah.anderson@gmail.com'),
+('C008', 'Sophia', 'Garcia', '555-890-1234', '567 Oak Lane, Brooklyn, NY', 'sophia.garcia@gmail.com'),
+('C009', 'Mason', 'Martin', '555-901-2345', '901 Pine Drive, Brooklyn, NY', 'mason.martin@gmail.com'),
+('C010', 'Mia', 'Hall', '555-012-3456', '123 Elm Road, Brooklyn, NY', 'mia.hall@gmail.com');
 
 -- Insert data into the Staff table
 INSERT INTO Staff VALUES
-('PS01', 'John', 'Smith', '2023-01-15', '555-123-4567', '123 Main Street, City A', 'john.smith@emailprovider.com', 'Active', NULL),
-('PS02', 'Emily', 'Johnson', '2023-02-28', '555-234-5678', '456 Oak Avenue, City B', 'emily.johnson@emailprovider.com', 'Active', NULL),
-('PS03', 'Michael', 'Davis', '2023-03-12', '555-345-6789', '789 Elm Lane, City C', 'michael.davis@emailprovider.com', 'Inactive', "2023-06-13"),
-('PS04', 'Olivia', 'Taylor', '2023-04-05', '555-456-7890', '321 Pine Road, City D', 'olivia.taylor@emailprovider.com', 'Active', NULL),
-('PS05', 'Ethan', 'Miller', '2023-05-20', '555-567-8901', '567 Birch Drive, City E', 'ethan.miller@emailprovider.com', 'Active', NULL),
-('PS06', 'Emma', 'White', '2023-06-08', '555-678-9012', '890 Cedar Street, City F', 'emma.white@emailprovider.com', 'Inactive', "2023-08-28"),
-('PS07', 'Liam', 'Anderson', '2023-07-03', '555-789-0123', '234 Maple Avenue, City G', 'liam.anderson@emailprovider.com', 'Active', NULL),
-('PS08', 'Ava', 'Garcia', '2023-08-17', '555-890-1234', '567 Oak Lane, City H', 'ava.garcia@emailprovider.com', 'Active', NULL),
-('PS09', 'Noah', 'Martin', '2023-09-22', '555-901-2345', '901 Pine Drive, City I', 'noah.martin@emailprovider.com', 'Inactive', "2023-09-12"),
-('PS10', 'Sophia', 'Hall', '2023-10-10', '555-012-3456', '123 Elm Road, City J', 'sophia.hall@emailprovider.com', 'Active', NULL);
+('PS01', 'John', 'Smith', '2023-01-15', '555-123-4567', '123 Staten Island Street, Staten Island, NY', 'john.smith@emailprovider.com', 'Active', NULL),
+('PS02', 'Emily', 'Johnson', '2023-02-28', '555-234-5678', '456 Staten Island Avenue, Staten Island, NY', 'emily.johnson@emailprovider.com', 'Active', NULL),
+('PS03', 'Michael', 'Davis', '2023-03-12', '555-345-6789', '789 Staten Island Lane, Staten Island, NY', 'michael.davis@emailprovider.com', 'Inactive', '2023-06-13'),
+('PS04', 'Olivia', 'Taylor', '2023-04-05', '555-456-7890', '321 Staten Island Road, Staten Island, NY', 'olivia.taylor@emailprovider.com', 'Active', NULL),
+('PS05', 'Ethan', 'Miller', '2023-05-20', '555-567-8901', '567 Staten Island Drive, Staten Island, NY', 'ethan.miller@emailprovider.com', 'Active', NULL),
+('PS06', 'Emma', 'White', '2023-06-08', '555-678-9012', '890 Staten Island Street, Staten Island, NY', 'emma.white@emailprovider.com', 'Inactive', '2023-08-28'),
+('PS07', 'Liam', 'Anderson', '2023-07-03', '555-789-0123', '234 Staten Island Avenue, Staten Island, NY', 'liam.anderson@emailprovider.com', 'Active', NULL),
+('PS08', 'Ava', 'Garcia', '2023-08-17', '555-890-1234', '567 Staten Island Lane, Staten Island, NY', 'ava.garcia@emailprovider.com', 'Active', NULL),
+('PS09', 'Noah', 'Martin', '2023-09-22', '555-901-2345', '901 Staten Island Drive, Staten Island, NY', 'noah.martin@emailprovider.com', 'Inactive', '2023-09-12'),
+('PS10', 'Sophia', 'Hall', '2023-10-10', '555-012-3456', '123 Staten Island Road, Staten Island, NY', 'sophia.hall@emailprovider.com', 'Active', NULL);
 
 -- Insert data into the Shipper table
 INSERT INTO Shipper VALUES
-('SH01', 'David', 'Harris', '555-123-4567', '123 Main Street, City A', 'david.harris@gmail.com'),
-('SH02', 'Olivia', 'Wilson', '555-234-5678', '456 Oak Avenue, City B', 'olivia.wilson@gmail.com'),
-('SH03', 'Ethan', 'Turner', '555-345-6789', '789 Elm Lane, City C', 'ethan.turner@gmail.com'),
-('SH04', 'Emma', 'Parker', '555-456-7890', '321 Pine Road, City D', 'emma.parker@gmail.com'),
-('SH05', 'Liam', 'Cooper', '555-567-8901', '567 Birch Drive, City E', 'liam.cooper@gmail.com'),
-('SH06', 'Ava', 'Hayes', '555-678-9012', '890 Cedar Street, City F', 'ava.hayes@gmail.com'),
-('SH07', 'Noah', 'Griffin', '555-789-0123', '234 Maple Avenue, City G', 'noah.griffin@gmail.com'),
-('SH08', 'Sophia', 'Harrison', '555-890-1234', '567 Oak Lane, City H', 'sophia.harrison@gmail.com'),
-('SH09', 'Mason', 'Porter', '555-901-2345', '901 Pine Drive, City I', 'mason.porter@gmail.com'),
-('SH10', 'Mia', 'Bennett', '555-012-3456', '123 Elm Road, City J', 'mia.bennett@gmail.com');
+('SH01', 'David', 'Harris', '555-123-4567', '123 Bronx Street, Bronx, NY', 'david.harris@gmail.com'),
+('SH02', 'Olivia', 'Wilson', '555-234-5678', '456 Bronx Avenue, Bronx, NY', 'olivia.wilson@gmail.com'),
+('SH03', 'Ethan', 'Turner', '555-345-6789', '789 Bronx Lane, Bronx, NY', 'ethan.turner@gmail.com'),
+('SH04', 'Emma', 'Parker', '555-456-7890', '321 Bronx Road, Bronx, NY', 'emma.parker@gmail.com'),
+('SH05', 'Liam', 'Cooper', '555-567-8901', '567 Bronx Drive, Bronx, NY', 'liam.cooper@gmail.com'),
+('SH06', 'Ava', 'Hayes', '555-678-9012', '890 Bronx Street, Bronx, NY', 'ava.hayes@gmail.com'),
+('SH07', 'Noah', 'Griffin', '555-789-0123', '234 Bronx Avenue, Bronx, NY', 'noah.griffin@gmail.com'),
+('SH08', 'Sophia', 'Harrison', '555-890-1234', '567 Bronx Lane, Bronx, NY', 'sophia.harrison@gmail.com'),
+('SH09', 'Mason', 'Porter', '555-901-2345', '901 Bronx Drive, Bronx, NY', 'mason.porter@gmail.com'),
+('SH10', 'Mia', 'Bennett', '555-012-3456', '123 Bronx Road, Bronx, NY', 'mia.bennett@gmail.com');
 
 -- Insert data into the Orders table
 INSERT INTO Orders (`DrugID`, `CustomerID`, `StaffID`, `ShipperID`, `Quantity`, `OrderDate`) VALUES
