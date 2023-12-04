@@ -114,3 +114,6 @@ INSERT INTO Shipper VALUES
 ('SH08', 'Sophia', 'Harrison', '555-890-1234', '567 Oak Lane, City H', 'sophia.harrison@gmail.com'),
 ('SH09', 'Mason', 'Porter', '555-901-2345', '901 Pine Drive, City I', 'mason.porter@gmail.com'),
 ('SH10', 'Mia', 'Bennett', '555-012-3456', '123 Elm Road, City J', 'mia.bennett@gmail.com');
+
+INSERT INTO Orders (`DrugID`, `CustomerID`, `StaffID`, `ShipperID`, `Quantity`)
+VALUES ("D001", "C001", "PS01", "SH01", 50);
