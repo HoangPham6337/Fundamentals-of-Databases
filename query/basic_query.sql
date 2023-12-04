@@ -23,15 +23,15 @@ WHERE A.`ManufacturerID` = 'M001';
 SELECT * FROM orders;
 
 -- Search for shipper data by name, contact information, and order status
-SELECT S.`ShipperID`, CONCAT(S.`FirstName`, ' ', S.`LastName`) AS FullName, S.`Email`, S.`Phone`, O.`OrderStatus`
+SELECT S.`ShipperID`, CONCAT(S.`FirstName`, ' ', S.`LastName`) AS FullName, S.`Email`, S.`Phone`, O.`Order_Status`
 FROM `shipper` AS S
 INNER JOIN `orders` AS O
 ON S.`ShipperID` = O.`ShipperID`;
 
 -- Search for orders by order date and delivery status
-SELECT O.`Quantity`, O.`OrderDate`, O.`OrderStatus`, C.`Address`
-FROM `orders` AS O
-INNER JOIN `customer` AS C
+SELECT O.`Quantity`, O.`OrderDate`, O.`Order_Status`, C.`Customer_Address`
+FROM `Orders` AS O
+INNER JOIN `Customer` AS C
 ON O.`CustomerID` = C.`CustomerID`;
 
 -- Filter orders by the quantity of drugs sold for a specific period of time
