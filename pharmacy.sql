@@ -6,7 +6,7 @@ USE Pharmacy;
 CREATE TABLE Manufacturer (
     ManufacturerID VARCHAR(4) PRIMARY KEY NOT NULL,
     CompanyName VARCHAR(50) DEFAULT NULL,
-    Address VARCHAR(100) DEFAULT NULL,
+    Manufacturer_Address VARCHAR(100) DEFAULT NULL,
     PhoneNumber VARCHAR(15) DEFAULT NULL,
     Website VARCHAR(50) DEFAULT NULL
 );
@@ -52,7 +52,7 @@ CREATE TABLE Customer (
     FirstName VARCHAR(50) DEFAULT NULL,
     LastName VARCHAR(50) DEFAULT NULL,
     Phone VARCHAR(15) DEFAULT NULL,
-    Address VARCHAR(100) DEFAULT NULL,
+    Customer_Address VARCHAR(100) DEFAULT NULL,
     Email VARCHAR(30) DEFAULT NULL
 );
 
@@ -63,7 +63,7 @@ CREATE TABLE Staff (
     LastName VARCHAR(50) DEFAULT NULL,
     HireDate DATE DEFAULT NULL,
     Phone VARCHAR(15) DEFAULT NULL,
-    Address VARCHAR(100) DEFAULT NULL,
+    Staff_Address VARCHAR(100) DEFAULT NULL,
     Email VARCHAR(100) DEFAULT NULL
 );
 
@@ -73,7 +73,7 @@ CREATE TABLE Shipper (
     FirstName VARCHAR(50) DEFAULT NULL,
     LastName VARCHAR(50) DEFAULT NULL,
     Phone VARCHAR(15) DEFAULT NULL,
-    Address VARCHAR(100) DEFAULT NULL,
+    Shipper_Address VARCHAR(100) DEFAULT NULL,
     Email VARCHAR(100) DEFAULT NULL
 );
 
@@ -84,7 +84,7 @@ CREATE TABLE Orders (
     ShipperID VARCHAR(4) NOT NULL,
     Quantity INT DEFAULT 0,
     OrderDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    Status VARCHAR(20) DEFAULT 'Pending',
+    Order_Status VARCHAR(20) DEFAULT 'Pending',
     Foreign Key (DrugID) REFERENCES Drugs(DrugID),
     Foreign Key (CustomerID) REFERENCES Customer(CustomerID),
     Foreign Key (StaffID) REFERENCES Staff(StaffID),
