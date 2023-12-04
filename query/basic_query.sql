@@ -11,3 +11,13 @@ FROM drugs
 SELECT `DrugID`, `DrugName`, `BatchNumber`, drugs.`ManufacturerID`, `CompanyName`
 FROM drugs INNER JOIN manufacturer
 ON drugs.`ManufacturerID` = manufacturer.`ManufacturerID`;
+
+-- List all the drugs of a manufacturer
+SELECT A.`ManufacturerID`, `CompanyName`, `DrugID`, `DrugName`
+FROM drugs AS A
+INNER JOIN manufacturer AS B
+ON A.`ManufacturerID` = B.`ManufacturerID`
+WHERE A.`ManufacturerID` = 'M001';
+
+-- Check all orders
+SELECT * FROM orders;

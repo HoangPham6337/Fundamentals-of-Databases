@@ -1,3 +1,4 @@
+DROP TRIGGER IF EXISTS BeforeOrderUpdateQuantity;
 DELIMITER //
 CREATE TRIGGER BeforeOrderUpdateQuantity
 BEFORE INSERT ON Orders
@@ -22,4 +23,3 @@ BEGIN
         NEW.Status = IFNULL(NEW.Status, 'Pending');
 END //
 DELIMITER ;
-DROP TRIGGER IF EXISTS BeforeOrderUpdateQuantity;
