@@ -44,7 +44,7 @@ ORDER BY `Quantity` DESC;
 -- 1) By name
 SELECT *
 FROM drugs
-WHERE `DrugName` LIKE '%Tranqoquil%'; 
+WHERE `DrugName` LIKE 'Tranqoquil'; 
 -- 2) By batch number
 SELECT *
 FROM drugs
