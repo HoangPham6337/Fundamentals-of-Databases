@@ -88,7 +88,8 @@ CREATE TABLE Orders (
     Quantity INT DEFAULT 0,
     OrderDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     Order_Status VARCHAR(20) DEFAULT 'Pending',
-    Foreign Key (DrugID) REFERENCES Drugs(DrugID),
+    Foreign Key (DrugID) REFERENCES Drugs(DrugID)
+    ON DELETE CASCADE,
     Foreign Key (CustomerID) REFERENCES Customer(CustomerID),
     Foreign Key (StaffID) REFERENCES Staff(StaffID),
     Foreign Key (ShipperID) REFERENCES Shipper(ShipperID)
