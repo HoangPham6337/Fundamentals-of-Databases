@@ -80,6 +80,20 @@ WHERE b.`Order_status` <> 'Cancelled'
 GROUP BY a.`DrugID`
 ORDER BY COALESCE (SUM(b.`Quantity`), 0) DESC;
 
+-- Create procedure to retrieve dugs in a price range
+DELIMITER //
+CREATE PROCEDURE GetDrugsInPriceRange(
+    IN minPrice DECIMAL(10, 2),
+    IN maxPrice DECIMAL(10, 2)
+)
+BEGIN
+    SELECT *
+    FROM Drugs
+    WHERE PurchasePrice BETWEEN minPrice AND maxPrice;
+END //
+DELIMITER ;
+CALL GetDrugsInPriceRange(40.00, 80.00);
+
 -- Create a view to keep track of the orders and the total money the customer have to pay for their drugs.
 DROP VIEW IF EXISTS CustomerOrderView;
 CREATE VIEW CustomerOrderView AS

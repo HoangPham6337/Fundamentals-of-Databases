@@ -1,3 +1,4 @@
+-- Create a trigger to update the quantity in stock after an order has been made
 DROP TRIGGER IF EXISTS BeforeOrderUpdateQuantity;
 DELIMITER //
 CREATE TRIGGER BeforeOrderUpdateQuantity
@@ -29,7 +30,7 @@ BEGIN
 END //
 DELIMITER ;
 
--- Return the quantity of an order back to the Drugs table when the order's statis is set to "Cancelled"
+-- Create a trigger to return the quantity of an order back to the Drugs table when the order's status is set to "Cancelled"
 DELIMITER //
 CREATE TRIGGER after_update_order_status
 AFTER UPDATE ON orders
@@ -42,20 +43,6 @@ BEGIN
 	END IF;
 END //
 DELIMITER ;
-
--- Create procedure to retrieve dugs in a price range
-DELIMITER //
-CREATE PROCEDURE GetDrugsInPriceRange(
-    IN minPrice DECIMAL(10, 2),
-    IN maxPrice DECIMAL(10, 2)
-)
-BEGIN
-    SELECT *
-    FROM Drugs
-    WHERE PurchasePrice BETWEEN minPrice AND maxPrice;
-END //
-DELIMITER ;
-CALL GetDrugsInPriceRange(40.00, 80.00);
 
 -- Create a procedure to update staff hire date
 DELIMITER //

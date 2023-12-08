@@ -128,7 +128,10 @@ INSERT INTO Orders (`DrugID`, `CustomerID`, `StaffID`, `ShipperID`, `Quantity`, 
 ('D001', 'C009', 'PS09', 'SH09', 14, '2023-12-22 14:15:00'),
 ('D020', 'C010', 'PS10', 'SH10', 50, '2023-12-01 16:20:00');
 
--- Update orders table, set some status to 'Cancelled'
+-- Update orders table, set some status to 'Cancelled' and 'Completed'
 UPDATE orders
 SET `Order_status` = "Cancelled"
 WHERE `OrderID` IN (2, 4, 7, 9, 11);
+UPDATE orders
+SET `Order_status` = "Completed"
+WHERE `OrderID` IN (1, 5, 6, 8, 15);
