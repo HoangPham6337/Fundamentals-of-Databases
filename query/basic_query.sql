@@ -40,7 +40,6 @@ FROM orders
 HAVING `OrderDate` > 2021-01-01
 ORDER BY `Quantity` DESC;
 
--- Ha starts here (first 2 parts)
 -- Drug search filters
 -- 1) By name
 SELECT *
@@ -69,12 +68,8 @@ SELECT *
 FROM drugs
 WHERE `ArrivalDate` = '2023-11-20';
 -- 7) By quantity in stock
-SELECT *
-FROM drugs
-WHERE `Quantity` = '100';
--- 8) By highest / lowest ratings
-
--- 9) Identify trending drugs based on recent orders and ratings (let say trending in the past month)
+SELECT * FROM drugs WHERE `Quantity` = '100';
+-- 9) Identify trending drugs based on recent orders (let say trending in the past month)
 SELECT drugs.`DrugID`, drugs.`DrugName`, SUM(orders.`Quantity`) as total_quantity
 FROM orders
 JOIN drugs ON orders.`DrugID` = drugs.`DrugID`
