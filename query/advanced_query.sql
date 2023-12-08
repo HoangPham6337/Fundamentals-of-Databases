@@ -1,3 +1,19 @@
+-- Search for customers by address, phone number, purchased value, and preferred drug subjects
+SELECT
+    C.`CustomerID`,
+    CONCAT(C.`FirstName`, ' ', C.`LastName`) AS CustomerName,
+    C.`Customer_Address` AS Address,
+    C.`Phone` AS PhoneNumber,
+    SUM(D.`SellingPrice` * O.`Quantity`) AS PurchasedValue,
+    GROUP_CONCAT(DISTINCT D.`DrugName` ORDER BY D.`DrugName` ASC SEPARATOR ', ') AS PreferredDrugSubjects
+FROM `Customer` AS C
+JOIN `Orders` AS O ON C.`CustomerID` = O.`CustomerID`
+JOIN `Drugs` AS D ON O.`DrugID` = D.`DrugID`
+WHERE O.`Order_status` <> 'Cancelled'
+GROUP BY
+    C.`CustomerID`, C.`FirstName`, C.`LastName`, C.`Customer_Address`, C.`Phone`
+ORDER BY Address, PhoneNumber, PurchasedValue DESC;
+
 -- Show StaffID, Name, HireDate and Quantity Sold by staffs who has been working for more than 6 months
 SELECT  a.`StaffID`, CONCAT(a.`FirstName`, " ", a.`LastName`) AS Name, a.`HireDate`,
         SUM(b.`Quantity`) AS "Quantity Sold"
@@ -10,6 +26,7 @@ GROUP BY a.`StaffID`;
 SELECT orders.`DrugID`, drugs.`DrugName`, COUNT(orders.`DrugID`) AS "Purchased time", SUM(orders.`Quantity`) AS "Total sold" 
 FROM orders
 JOIN drugs ON orders.`DrugID` = drugs.`DrugID`
+WHERE orders.`Order_status` <> 'Cancelled'
 GROUP BY `DrugID`
 ORDER BY SUM(`Quantity`) DESC;
 
@@ -18,6 +35,7 @@ SELECT 	a.`DrugID`,
 		COALESCE (SUM(b.`Quantity`), 0) AS "Total Sells In The Quarter"
 FROM drugs AS a LEFT JOIN orders AS b
 ON a.`DrugID` = b.`DrugID` AND (b.`OrderDate` > "2022-10-01" AND b.`OrderDate` < "2022-12-31")
+WHERE b.`Order_status` <> 'Cancelled'
 GROUP BY a.`DrugID`
 ORDER BY COALESCE (SUM(b.`Quantity`), 0) DESC;
 
@@ -26,23 +44,10 @@ SELECT 	a.`DrugID`,
 		COALESCE (SUM(b.`Quantity`), 0) AS "Total Sells In The Year"
 FROM drugs AS a LEFT JOIN orders AS b
 ON a.`DrugID` = b.`DrugID` AND (YEAR(b.`OrderDate`) = 2022)
+WHERE b.`Order_status` <> 'Cancelled'
 GROUP BY a.`DrugID`
 ORDER BY COALESCE (SUM(b.`Quantity`), 0) DESC;
 
--- Search for customers by address, phone number, purchased value, and preferred drug subjects
-SELECT
-    C.`CustomerID`,
-    CONCAT(C.`FirstName`, ' ', C.`LastName`) AS CustomerName,
-    C.`Customer_Address` AS Address,
-    C.`Phone` AS PhoneNumber,
-    SUM(D.`SellingPrice` * O.`Quantity`) AS PurchasedValue,
-    GROUP_CONCAT(DISTINCT D.`DrugName` ORDER BY D.`DrugName` ASC SEPARATOR ', ') AS PreferredDrugSubjects
-FROM `Customer` AS C
-JOIN `Orders` AS O ON C.`CustomerID` = O.`CustomerID`
-JOIN `Drugs` AS D ON O.`DrugID` = D.`DrugID`
-GROUP BY
-    C.`CustomerID`, C.`FirstName`, C.`LastName`, C.`Customer_Address`, C.`Phone`
-ORDER BY Address, PhoneNumber, PurchasedValue DESC;
 
     -- Identify customers who purchase the most during a specific time frame
 SELECT
@@ -54,7 +59,7 @@ SELECT
 FROM `Customer` AS C
 JOIN `Orders` AS O ON C.`CustomerID` = O.`CustomerID`
 JOIN `Drugs` AS D ON O.`DrugID` = D.`DrugID`
-WHERE O.`OrderDate` BETWEEN '2023-01-01' AND '2023-12-31' 
+WHERE O.`OrderDate` BETWEEN '2023-01-01' AND '2023-12-31' AND O.`Order_status` <> 'Cancelled'
 GROUP BY
     C.`CustomerID`, C.`FirstName`, C.`LastName`, C.`Customer_Address`, C.`Phone`
 ORDER BY TotalPurchasedValue DESC
@@ -71,7 +76,7 @@ SELECT
 FROM `Customer` AS C
 JOIN `Orders` AS O ON C.`CustomerID` = O.`CustomerID`
 JOIN `Drugs` AS D ON O.`DrugID` = D.`DrugID`
-WHERE D.`DrugName` = 'Tranqoquil' 
+WHERE D.`DrugName` = 'Tranqoquil' AND O.`Order_status` <> 'Cancelled'
 GROUP BY
     C.`CustomerID`, C.`FirstName`, C.`LastName`, C.`Customer_Address`, C.`Phone`, D.`DrugName`
 ORDER BY NumberOfDrugsPurchased DESC;
