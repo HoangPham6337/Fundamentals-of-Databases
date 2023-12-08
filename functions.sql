@@ -99,8 +99,8 @@ BEGIN
             p_ArrivalDate, p_Quantity, p_PurchasePrice, p_SellingPrice, p_ManufacturerID
         );
     END IF;
-END;
-DELIMITTER ;
+END//
+DELIMITER ;
 CALL InsertNewDrug('D021', 'NewDrug', 'TQ123456', '2024-12-31', 'Room Temperature', '2023-12-08', 50, 25.00, 40.00, 'M010');
 
 -- Create a procedure to delete drugs in database
