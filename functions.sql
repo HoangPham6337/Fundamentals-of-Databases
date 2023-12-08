@@ -28,3 +28,17 @@ BEGIN
 	END IF;
 END //
 DELIMITER ;
+
+-- Return the quantity of an order back to the Drugs table when the order's statis is set to "Cancelled"
+DELIMITER //
+CREATE TRIGGER after_update_order_status
+AFTER UPDATE ON orders
+FOR EACH ROW
+BEGIN
+	IF NEW.`Order_Status` = "Cancelled" THEN
+		UPDATE drugs
+        SET Quantity = Quantity + OLD.`Quantity`
+        WHERE DrugID = OLD.`DrugID`;
+	END IF;
+END //
+DELIMITER ;

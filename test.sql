@@ -45,7 +45,7 @@ BEGIN
 END //
 DELIMITER ;
 
--- Create a procedure to insert new drug
+-- Create a procedure to update staff hire date
 DELIMITER //
 CREATE PROCEDURE UpdateStaffHireDate(IN p_StaffID VARCHAR(4), IN p_NewHireDate DATE)
 BEGIN
@@ -57,3 +57,25 @@ BEGIN
 END //
 DELIMITER ;
 
+SELECT table_schema AS "Database",
+  ROUND(SUM(data_length + index_length) / 1024 / 1024, 2) AS "Size (MB)"
+FROM information_schema.tables
+GROUP BY table_schema;
+
+CREATE VIEW CustomerOrderView AS
+SELECT
+    O.CustomerID,
+    O.OrderID,
+    CONCAT(C.FirstName, ' ' ,C.LastName) AS CustomerName,
+    O.DrugID,
+    D.DrugName,
+    O.Quantity,
+    O.OrderDate,
+    O.Order_Status,
+    (O.Quantity * D.SellingPrice) AS TotalPayment
+FROM
+    Orders O
+    JOIN Customer C ON O.CustomerID = C.CustomerID
+    JOIN Drugs D ON O.DrugID = D.DrugID;
+SELECT * FROM CustomerOrderView;
+DROP VIEW IF EXISTS CustomerOrderView;

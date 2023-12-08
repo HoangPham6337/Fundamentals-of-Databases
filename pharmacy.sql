@@ -32,7 +32,7 @@ CREATE TABLE BatchDetails (
 
 -- Create the Drug table
 CREATE TABLE Drugs(
-    DrugID VARCHAR(4) PRIMARY KEY NOT NULL,
+    DrugID VARCHAR(4) PRIMARY KEY NOT NULL ,
     DrugName VARCHAR(50) DEFAULT NULL,
     BatchNumber VARCHAR(20) NOT NULL,
     ExpiryDate DATE DEFAULT NULL,

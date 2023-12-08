@@ -7,8 +7,9 @@ WHERE a.`StaffID` = b.`StaffID` AND (DATEDIFF(NOW(), a.`HireDate`)/30) > 6
 GROUP BY a.`StaffID`;
 
 -- List the most sold drug
-SELECT `DrugID`, COUNT(`DrugID`) AS "Purchased time", SUM(`Quantity`) AS "Total sold" 
+SELECT orders.`DrugID`, drugs.`DrugName`, COUNT(orders.`DrugID`) AS "Purchased time", SUM(orders.`Quantity`) AS "Total sold" 
 FROM orders
+JOIN drugs ON orders.`DrugID` = drugs.`DrugID`
 GROUP BY `DrugID`
 ORDER BY SUM(`Quantity`) DESC;
 
