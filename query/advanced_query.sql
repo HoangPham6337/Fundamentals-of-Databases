@@ -60,7 +60,8 @@ FROM orders
 JOIN drugs ON orders.`DrugID` = drugs.`DrugID`
 WHERE orders.`Order_status` <> 'Cancelled'
 GROUP BY `DrugID`
-ORDER BY SUM(`Quantity`) DESC;
+ORDER BY SUM(`Quantity`) DESC
+LIMIT 5;
 
 -- List the amount of drugs sold by quarter (for example: 4th quarter of 2022)
 SELECT 	a.`DrugID`, a.`DrugName`,
@@ -80,7 +81,7 @@ WHERE b.`Order_status` <> 'Cancelled'
 GROUP BY a.`DrugID`
 ORDER BY COALESCE (SUM(b.`Quantity`), 0) DESC;
 
--- Create procedure to retrieve dugs in a price range
+-- Create procedure to retrieve drugs in a price range
 DELIMITER //
 CREATE PROCEDURE GetDrugsInPriceRange(
     IN minPrice DECIMAL(10, 2),
@@ -98,8 +99,8 @@ CALL GetDrugsInPriceRange(40.00, 80.00);
 DROP VIEW IF EXISTS CustomerOrderView;
 CREATE VIEW CustomerOrderView AS
 SELECT
+	O.OrderID,
     O.CustomerID,
-    O.OrderID,
     CONCAT(C.FirstName, ' ' ,C.LastName) AS CustomerName,
     O.DrugID,
     D.DrugName,
